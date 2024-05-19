@@ -1,6 +1,4 @@
 ---
-Language:        Cpp
-
 # 基于的编码规范, 可选:
 # - LLVM: https://llvm.org/docs/CodingStandards.html
 # - Google: https://google.github.io/styleguide/cppguide.html
@@ -61,10 +59,11 @@ AlignConsecutiveDeclarations:
   AcrossComments:  false
   AlignCompound:   false
   PadOperators:    false
+# 是否对齐连续宏定义
 AlignConsecutiveMacros:
   Enabled:         true
-  AcrossEmptyLines: false
-  AcrossComments:  false
+  AcrossEmptyLines: true
+  AcrossComments:  true
   # 只在AlignConsecutiveAssignments配置中有效, 自动生成的clang-format有此项, 忽略
   AlignCompound:   false
   # 只在AlignConsecutiveAssignments配置中有效, 自动生成的clang-format有此项, 忽略
@@ -164,7 +163,7 @@ BreakAfterJavaFieldAnnotations: false
 # 字面字符串是否换行, true
 BreakStringLiterals: true
 # 代码列字符上限
-ColumnLimit:     120
+ColumnLimit:     80
 # pragma注释
 CommentPragmas:  '^ IWYU pragma:'
 # 注释关键字对齐(const/volatile), 建议Leave
@@ -406,5 +405,3 @@ WhitespaceSensitiveMacros:
   - NS_SWIFT_NAME
   - CF_SWIFT_NAME
 ...
-
-
